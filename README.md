@@ -19,6 +19,6 @@ The available version are
 
 Example to run a container with OpenJDK version 7 JDK
 
-	docker run -ti nimmis/java-centos:openjdk-7-jdk
+	`docker run -ti nimmis/java-centos:openjdk-7-jdk`
 
 
