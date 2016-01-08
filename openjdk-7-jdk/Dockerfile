@@ -1,8 +1,10 @@
-FROM centos:centos7
+FROM centos:7
 
 MAINTAINER nimmis <kjell.havneskold@gmail.com>
 
-RUN yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel && \
+RUN yum update -y && \
+yum install -y wget && \
+yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel && \
 yum clean all
 
 # Set environment variables.
