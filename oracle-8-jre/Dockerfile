@@ -1,8 +1,12 @@
-FROM centos:centos7
+FROM centos:7
 
 MAINTAINER nimmis <kjell.havneskold@gmail.com>
 
-RUN yum localinstall -y http://downloads.arctics.se/oracle_java/jre-8u25-linux-x64.rpm && \
+RUN yum update -y && \
+yum install -y wget && \ 
+wget -O /jre-8u66-linux-x64.rpm http://javadl.sun.com/webapps/download/AutoDL?BundleId=111740 && \
+yum localinstall -y /jre-8u66-linux-x64.rpm && \
+rm -f /jre-8u66-linux-x64.rpm && \
 yum clean all
 
 # Set environment variables.
