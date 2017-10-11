@@ -4,10 +4,10 @@ MAINTAINER nimmis <kjell.havneskold@gmail.com>
 
 RUN yum update -y && \
 yum install -y wget && \
-wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.rpm" && \
-yum localinstall -y jdk-7u80-linux-x64.rpm && \
-rm -f jdk-7u80-linux-x64.rpm && \
-yum clean all
+wget https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/jdk-7u80-linux-x64.rpm && \
+yum localinstall -y /jdk-7u80-linux-x64.rpm && \
+rm -f /jdk-7u80-linux-x64.rpm && \
+rm -rf /var/cache/yum
 
 # Set environment variables.
 ENV HOME /root
