@@ -11,6 +11,7 @@ yum clean all
 
 # Set environment variables.
 ENV HOME /root
+ENV JAVA_HOME=/usr/java/jdk-9
 
 # Define working directory.
 WORKDIR /root

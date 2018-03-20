@@ -18,6 +18,7 @@ rm -rf /var/cache/yum
 
 # Set environment variables.
 ENV HOME /root
+ENV JAVA_HOME=/usr/java/jdk-8
 
 # Define working directory.
 WORKDIR /root
